@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="assets/basic.css">
+    <script type="text/javascript" src="assets/validate.js"></script>
 </head>
 <body>
     <h1> Welcome to the lottery game! </h1>
     <p> If you would like to buy a ticket, click the button below! </p>
     <form action="/ticket" method="get">
         <input type="submit" value="Print Ticket">
+    </form> 
+    <p> Or...You can print a custom ticket:</p>
+    <form action="/customticket" method="post"> 
+        <input type="number" class="custnum" name="first">
+        <input type="number" class="custnum" name="second">
+        <input type="number" class="custnum" name="third">
+        <input type="number" class="custnum" name="fourth">
+        <input type="number" class="custnum" name="fifth">
+        <input type="number" class="custnum" name="mega">
+        <input type="submit" value="print" onSubmit="return validate()">
     </form>
 </body>
 </html>

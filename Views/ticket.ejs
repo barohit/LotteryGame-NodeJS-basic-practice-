@@ -9,5 +9,10 @@
 <body>
     <p> Congratulations, here is your ticket</p> <br />
     <%= ticket %>
+    <p> Check to see if you won! </p>
+    <form action="check" method="post"> 
+        <input type="hidden" value="<%= ticket %>" name="ticket">
+        <input type="submit">
+    </form>
 </body>
 </html>
