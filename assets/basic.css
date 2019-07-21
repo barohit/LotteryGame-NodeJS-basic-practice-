@@ -1,8 +1,9 @@
 .custnum {
-    width: 20px;
+    width: 30px;
 }
 
 body { 
     color: darkgreen;
     background-color: black;
+    text-align: center;
 }

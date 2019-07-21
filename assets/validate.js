@@ -10,6 +10,7 @@ function validate() {
             alert("Sorry, one or more of your numbers is out of range");
             return false; 
         } else {
+            alert("correct"); 
             return true; 
         }
     } else {

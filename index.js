@@ -7,7 +7,7 @@ const app = express();
 const urlParserEncoder = bodyParser.urlencoded({extended: false});
 
 app.set('view engine', 'ejs'); 
-app.use(express.static(path.join(__dirname, 'public', 'assets')));
+app.use('/assets', express.static('assets'));
 
 app.listen(5000, (err) => {
     if (err) {
@@ -78,3 +78,7 @@ app.post("/check", urlParserEncoder, (req, res) => {
     res.render('result', {result: result, match: match}); 
 
 })
+
+app.get('*', function(req, res){
+    res.sendFile(path.join(__dirname, 'public', '404.html'));
+  });
